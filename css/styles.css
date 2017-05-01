@@ -7,4 +7,10 @@
   padding: 5px;
   font-size: 1em; }
 
+.searched-for__container {
+  display: none; }
+
+.search-results__item {
+  margin: 4px; }
+
 /*# sourceMappingURL=styles.css.map */
