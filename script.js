@@ -1,10 +1,25 @@
 var yelp = new YelpSearch();
 
+
 function YelpSearch() {
 	this.searchYelp = searchYelp;
 
-	var keywordInput = document.getElementsByClassName('search-keyword__input')[0];
+	var keywordInput = document.getElementsByClassName('keyword-input')[0];
+	var searchBtn = document.getElementsByClassName('initiate-search-btn')[0];
 	var searchResults = document.getElementsByClassName('search-results__container')[0];
+
+	searchBtn.addEventListener("click", initiateSearch);
+	keywordInput.addEventListener("keyup", function(event) {
+		if (event.keyCode === 13) {
+			initiateSearch();
+		}
+	});
+	keywordInput.focus();
+
+	function initiateSearch() {
+		searchResults.innerHTML = "";
+		searchYelp(keywordInput.value, "Philadelphia");
+	}
 
 	function searchYelp(keywordStr, locationStr) {
 		$.ajax({
@@ -28,7 +43,7 @@ function YelpSearch() {
 
 		response.forEach(function(business, index) {
 			var newDiv = "<div class='search-results__item'>";
-			// <div class='search-results__item__image'></div>
+
 			var anchorTag = "<a target='_blank' href='";
 			anchorTag += business.url + "'>";
 			anchorTag += business.name;
@@ -41,25 +56,8 @@ function YelpSearch() {
 
 			searchResults.innerHTML += newDiv;
 			
-			
-
 		});
 
-		// response.forEach(function(business, index) {
-		// 	var imageDiv = document.getElementsByClassName('search-results__item__image')[index];
-		// 	console.log(business.image_url);
-		// 	imageDiv.style.backgroundImage = business.image_url;
-		// 	console.log(document.getElementsByClassName('search-results__item__image'));
-			
-		// 	console.log(imageDiv);
-
-		// });
-
-
-		function newBusinessDiv () {				
-		}
-
 	}
-
 
 }
