@@ -1,0 +1,24 @@
+Yelp API Assignment
+
+Create a site with a search bar and a list of Philadelphia neighborhoods and/or towns and cities in the metro region. These can be listed in a dropdown menu or just as a collection of buttons/divs. There should also be a button or div that when clicked runs a function that: 
+
+-  Searches the Yelp API for businesses in the selected neighborhood that match the search criteria from the search bar. 
+- Lists the results on the page with some of the data associated with each result (name, address, image, etc.)
+
+Additionally: 
+
+- When a result is clicked, it opens the Yelp page for that business in a new window.
+- When a user makes a new search, the old results go away and the new results  populate the page and are also clickable.
+
+Use SASS and the forEach loop instead of the for loop.
+
+EXTRA!
+
+Create functionality so that a user can "save" results and make more searches. A user can continue "saving" those results and view all of the saved results.
+
+When a user clicks on a result, instead of opening that result in a new tab, pop up a modal with that business' more specific information.
+
+ALSO:
+
+Use forEach,
+Use Sass
