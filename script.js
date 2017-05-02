@@ -18,9 +18,16 @@ $(document).ready(function() {
 
 		searchBtn.addEventListener("click", initiateSearch);
 		showDropdownMenuBtn.addEventListener("click", toggleDropdownMenu);
+
 		keywordInput.addEventListener("keyup", function(event) {
 			if (event.keyCode === 13) {
 				initiateSearch();
+			}
+		});
+
+		document.addEventListener("keyup", function() {
+			if (event.keyCode === 27) {
+				dropdownMenu.classList.remove('show-menu');
 			}
 		});
 
@@ -34,10 +41,6 @@ $(document).ready(function() {
 
 		keywordInput.focus();
 
-
-		function toggleDropdownMenu() {
-			dropdownMenu.classList.toggle('show-menu');		
-		}
 
 		function initiateSearch() {
 			var keywordStr = keywordInput.value;
@@ -87,7 +90,10 @@ $(document).ready(function() {
 				
 			});
 		}
-
+		
+		function toggleDropdownMenu() {
+			dropdownMenu.classList.toggle('show-menu');		
+		}
 	}
 
 });
