@@ -18,6 +18,7 @@ $(document).ready(function() {
 
 		searchBtn.addEventListener("click", initiateSearch);
 		showDropdownMenuBtn.addEventListener("click", toggleDropdownMenu);
+		searchResults.addEventListener("click", hideDropdownMenu);
 
 		keywordInput.addEventListener("keyup", function(event) {
 			if (event.keyCode === 13) {
@@ -27,7 +28,7 @@ $(document).ready(function() {
 
 		document.addEventListener("keyup", function() {
 			if (event.keyCode === 27) {
-				dropdownMenu.classList.remove('show-menu');
+				hideDropdownMenu();
 			}
 		});
 
@@ -90,9 +91,13 @@ $(document).ready(function() {
 				
 			});
 		}
-		
+
 		function toggleDropdownMenu() {
 			dropdownMenu.classList.toggle('show-menu');		
+		}
+
+		function hideDropdownMenu() {
+			dropdownMenu.classList.remove('show-menu');
 		}
 	}
 
