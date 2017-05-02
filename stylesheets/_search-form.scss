@@ -1,9 +1,16 @@
+.search-form__container {
+	display: flex;
+	justify-content: center;
+}
+
 .search-form__item {
-	display: inline-block;
+	// display: inline-block;
 	margin: 20px;
 }
 
 .keyword-input {
+	width: 200px;
+	height: 50px;
 	line-height: 40px;
 	padding: 5px;
 	font-size: 1em;

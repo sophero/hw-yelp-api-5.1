@@ -6,12 +6,47 @@
 </head>
 <body>
 
-	<input class="search-form__item keyword-input"></input>
-	<div class="search-form__item location-dropdown-menu">
-		<div class="location-dropdown-menu__item">Philadelphia</div>
-	</div>
-	<input type="button" class="search-form__item initiate-search-btn" value="Search">
+	<div class="search-form__container">
+		<input class="search-form__item keyword-input"></input>
 
+
+		<div class="search-form__item location-dropdown-menu">
+			Location: 
+			<span class="location-dropdown-menu__selected">Philadelphia</span>
+
+			<div class="location-dropdown-menu__container">
+				
+
+				<div class="location-dropdown-menu__item-container">
+					<div class="location-dropdown-menu__item">Philadelphia</div>
+					<div class="location-dropdown-menu__item">West Philadelphia</div>
+					<div class="location-dropdown-menu__item">North Philadelphia</div>
+					<div class="location-dropdown-menu__item">South Philadelphia</div>
+					<div class="location-dropdown-menu__item">Center City</div>
+					<div class="location-dropdown-menu__item">Fishtown</div>
+					<div class="location-dropdown-menu__item">Old City</div>
+					<div class="location-dropdown-menu__item">Penn's Landing</div>
+					<div class="location-dropdown-menu__item">Manayunk</div>
+					<div class="location-dropdown-menu__item">Kensington</div>
+					<div class="location-dropdown-menu__item">Chestnut Hill</div>
+					<div class="location-dropdown-menu__item">Germantown</div>
+					<div class="location-dropdown-menu__item">Chinatown</div>
+					<div class="location-dropdown-menu__item">Northern Liberties</div>
+					<div class="location-dropdown-menu__item">Frankford</div>
+					<div class="location-dropdown-menu__item">Strawberry Mansion</div>
+					<div class="location-dropdown-menu__item">Fairmount</div>
+					<div class="location-dropdown-menu__item">Port Richmond</div>
+					<div class="location-dropdown-menu__item">University City</div>
+					<div class="location-dropdown-menu__item">Powelton Village</div>
+					<div class="location-dropdown-menu__item">Southwest Philadelphia</div>
+					<div class="location-dropdown-menu__item">Northeast Philadelphia</div>
+				</div>
+			</div>			
+		</div>
+
+		<input type="button" class="search-form__item initiate-search-btn" value="Search">
+	
+	</div>
 	<div class="searched-for__container">
 		You searched for:
 		<span class="searched-for__keywords"></span>
@@ -21,7 +56,7 @@
 	<div class="search-results__container">
 	</div>
 
-
+	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </body>

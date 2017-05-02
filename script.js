@@ -10,6 +10,8 @@ function YelpSearch() {
 	var searchedFor = document.getElementsByClassName('searched-for__container')[0];
 	var searchedForKeywords = document.getElementsByClassName('searched-for__keywords')[0];
 	var searchedForLocation = document.getElementsByClassName('searched-for__location')[0];
+	var dropdownSelectedItem = document.getElementsByClassName('location-dropdown-menu__selected')[0];
+	var dropdownMenuItems = document.getElementsByClassName('location-dropdown-menu__item');
 
 	searchBtn.addEventListener("click", initiateSearch);
 	keywordInput.addEventListener("keyup", function(event) {
@@ -19,9 +21,20 @@ function YelpSearch() {
 	});
 	keywordInput.focus();
 
+	for (let k = 0; k < dropdownMenuItems.length; k++) {
+		dropdownMenuItems[k].addEventListener("click", function() {
+			dropdownSelectedItem.innerHTML = dropdownMenuItems[k].innerHTML;
+		});
+	}
+	// dropdownMenuItems.forEach(function(elem) {
+	// 	elem.addEventListener("click", function() {
+	// 		dropdownSelectedItem.innerHTML = elem.innerHTML;
+	// 	});
+	// });
+
 	function initiateSearch() {
 		var keywordStr = keywordInput.value;
-		var locationStr = "Philadelphia";
+		var locationStr = dropdownSelectedItem.innerHTML;
 		
 		keywordInput.value = "";
 
@@ -68,5 +81,7 @@ function YelpSearch() {
 		});
 
 	}
+
+
 
 }

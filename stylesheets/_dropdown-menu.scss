@@ -1,0 +1,14 @@
+.location-dropdown-menu {
+	display: inline-block;
+}
+
+.location-dropdown-menu__container {
+	// display: flex;
+}
+
+.location-dropdown-menu__item-container {
+	display: flex;
+	flex-direction: column;
+	height: 100px;
+	overflow: auto;
+}
