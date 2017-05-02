@@ -7,16 +7,17 @@
 <body>
 
 	<div class="search-form__container">
-		<input class="search-form__item keyword-input"></input>
-
+	
+		<input class="search-form__item keyword-input" placeholder="Enter keyword(s)"></input>
 
 		<div class="search-form__item location-dropdown-menu">
-			Location: 
-			<span class="location-dropdown-menu__selected">Philadelphia</span>
-
+			<div class="location-dropdown-menu__head">
+				Location: 
+				<span class="location-dropdown-menu__selected">Philadelphia</span>
+				<span class="location-dropdown-menu__show-menu-btn">V</span>
+			</div>
 			<div class="location-dropdown-menu__container">
 				
-
 				<div class="location-dropdown-menu__item-container">
 					<div class="location-dropdown-menu__item">Philadelphia</div>
 					<div class="location-dropdown-menu__item">West Philadelphia</div>
@@ -44,7 +45,7 @@
 			</div>			
 		</div>
 
-		<input type="button" class="search-form__item initiate-search-btn" value="Search">
+		<button class="search-form__item initiate-search-btn">Search</button>
 	
 	</div>
 	<div class="searched-for__container">
@@ -53,8 +54,7 @@
 		in
 		<span class="searched-for__location"></span>
 	</div>
-	<div class="search-results__container">
-	</div>
+	<div class="search-results__container"></div>
 
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

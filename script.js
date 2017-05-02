@@ -11,26 +11,32 @@ function YelpSearch() {
 	var searchedForKeywords = document.getElementsByClassName('searched-for__keywords')[0];
 	var searchedForLocation = document.getElementsByClassName('searched-for__location')[0];
 	var dropdownSelectedItem = document.getElementsByClassName('location-dropdown-menu__selected')[0];
+	var dropdownMenu = document.getElementsByClassName('location-dropdown-menu__container')[0];
+	var showDropdownMenuBtn = document.getElementsByClassName('location-dropdown-menu__show-menu-btn')[0];
 	var dropdownMenuItems = document.getElementsByClassName('location-dropdown-menu__item');
 
 	searchBtn.addEventListener("click", initiateSearch);
+	showDropdownMenuBtn.addEventListener("click", toggleDropdownMenu);
 	keywordInput.addEventListener("keyup", function(event) {
 		if (event.keyCode === 13) {
 			initiateSearch();
 		}
 	});
-	keywordInput.focus();
 
 	for (let k = 0; k < dropdownMenuItems.length; k++) {
 		dropdownMenuItems[k].addEventListener("click", function() {
 			dropdownSelectedItem.innerHTML = dropdownMenuItems[k].innerHTML;
+			toggleDropdownMenu();
+			keywordInput.focus();
 		});
 	}
-	// dropdownMenuItems.forEach(function(elem) {
-	// 	elem.addEventListener("click", function() {
-	// 		dropdownSelectedItem.innerHTML = elem.innerHTML;
-	// 	});
-	// });
+
+	keywordInput.focus();
+
+
+	function toggleDropdownMenu() {
+		dropdownMenu.classList.toggle('show-menu');		
+	}
 
 	function initiateSearch() {
 		var keywordStr = keywordInput.value;
@@ -79,9 +85,6 @@ function YelpSearch() {
 			searchResults.innerHTML += newDiv;
 			
 		});
-
 	}
-
-
 
 }

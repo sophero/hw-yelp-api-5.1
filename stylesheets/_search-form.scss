@@ -1,10 +1,10 @@
 .search-form__container {
 	display: flex;
 	justify-content: center;
+	font-family: Helvetica, sans-serif;
 }
 
 .search-form__item {
-	// display: inline-block;
 	margin: 20px;
 }
 
@@ -12,6 +12,22 @@
 	width: 200px;
 	height: 50px;
 	line-height: 40px;
-	padding: 5px;
-	font-size: 1em;
+	padding: 5px 10px;
+	font-size: 1.1em;
+}
+
+.initiate-search-btn {
+	width: 100px;
+	height: 45px;
+	font-size: 1.1em;
+	margin: 20px 5px;
+	// border: 1px solid black;
+	// border-radius: 7px;
+	// background-color: lightblue;
+
+	&:hover {
+		// background-color: lightgreen;	
+		// border-width: 2px;
+		cursor: pointer;
+	}
 }
