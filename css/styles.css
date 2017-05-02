@@ -29,7 +29,7 @@ body {
 
 .location-dropdown-menu__head {
   height: 50px;
-  width: 300px;
+  width: 310px;
   padding: 10px;
   padding-bottom: 0;
   font-size: 1.1em; }
@@ -50,7 +50,7 @@ body {
   display: none;
   width: 200px;
   position: absolute;
-  left: 30px; }
+  right: 45px; }
 
 .show-menu {
   display: block; }
